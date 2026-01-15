@@ -1,0 +1,199 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hoollow Design System - Premium Dark Theme */
+
+@layer base {
+  :root {
+    /* Core palette - Plum accent on deep black */
+    --background: 240 20% 4%;
+    --foreground: 0 0% 100%;
+
+    --card: 240 15% 8%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 240 15% 8%;
+    --popover-foreground: 0 0% 100%;
+
+    /* Plum primary brand color */
+    --primary: 300 47% 75%;
+    --primary-foreground: 240 20% 4%;
+
+    --secondary: 240 12% 12%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 240 10% 15%;
+    --muted-foreground: 240 8% 75%;
+
+    --accent: 300 47% 75%;
+    --accent-foreground: 240 20% 4%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 10% 18%;
+    --input: 240 10% 18%;
+    --ring: 300 47% 75%;
+
+    --radius: 0.75rem;
+
+    /* Custom Hoollow tokens */
+    --glow-primary: 300 47% 75%;
+    --text-secondary: 240 8% 75%;
+    --glass-bg: 240 15% 8%;
+    --glass-border: 240 10% 20%;
+  }
+
+  .dark {
+    --background: 240 20% 4%;
+    --foreground: 0 0% 100%;
+    --card: 240 15% 8%;
+    --card-foreground: 0 0% 100%;
+    --popover: 240 15% 8%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 300 47% 75%;
+    --primary-foreground: 240 20% 4%;
+    --secondary: 240 12% 12%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 240 10% 15%;
+    --muted-foreground: 240 8% 75%;
+    --accent: 300 47% 75%;
+    --accent-foreground: 240 20% 4%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 10% 18%;
+    --input: 240 10% 18%;
+    --ring: 300 47% 75%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  /* Glassmorphism card */
+  .glass-card {
+    @apply bg-card/60 backdrop-blur-xl border border-border/50 rounded-2xl;
+    box-shadow: 
+      0 0 0 1px rgba(255, 255, 255, 0.05) inset,
+      0 20px 50px -15px rgba(0, 0, 0, 0.5);
+  }
+
+  .glass-card-hover {
+    @apply glass-card transition-all duration-500;
+  }
+
+  .glass-card-hover:hover {
+    border-color: hsl(var(--primary) / 0.5);
+    box-shadow: 
+      0 0 0 1px rgba(255, 255, 255, 0.05) inset,
+      0 0 30px -5px hsl(var(--primary) / 0.35),
+      0 20px 50px -15px rgba(0, 0, 0, 0.5);
+    transform: translateY(-4px);
+  }
+
+  /* Glow button */
+  .glow-button {
+    @apply relative overflow-hidden transition-all duration-300;
+  }
+
+  .glow-button::before {
+    content: '';
+    @apply absolute inset-0 opacity-0 transition-opacity duration-300;
+    background: radial-gradient(circle at center, hsl(var(--primary) / 0.4), transparent 70%);
+  }
+
+  .glow-button:hover::before {
+    @apply opacity-100;
+  }
+
+  /* Text gradient */
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary) / 0.7));
+  }
+
+  /* Navbar blur */
+  .nav-blur {
+    @apply backdrop-blur-xl bg-background/70 border-b border-border/50;
+  }
+
+  /* Section spacing */
+  .section-padding {
+    @apply py-20 md:py-28 lg:py-32;
+  }
+
+  /* Glow effect for elements */
+  .glow-primary {
+    box-shadow: 0 0 40px -10px hsl(var(--primary) / 0.5);
+  }
+
+  /* Avatar glow on hover */
+  .avatar-glow {
+    @apply transition-all duration-300;
+  }
+
+  .avatar-glow:hover {
+    box-shadow: 0 0 30px -5px hsl(var(--primary) / 0.6);
+    transform: scale(1.05);
+  }
+}
+
+@layer utilities {
+  /* Fade in animation */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Floating animation */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  /* Pulse glow */
+  .animate-pulse-glow {
+    animation: pulseGlow 3s ease-in-out infinite;
+  }
+
+  @keyframes pulseGlow {
+    0%, 100% {
+      box-shadow: 0 0 20px -5px hsl(var(--primary) / 0.3);
+    }
+    50% {
+      box-shadow: 0 0 40px -5px hsl(var(--primary) / 0.5);
+    }
+  }
+}
