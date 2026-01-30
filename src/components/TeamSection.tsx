@@ -14,7 +14,7 @@ import rajat from "@/assets/team/user.png";
 import sarvesh from "@/assets/team/user.png";
 import anushka from "@/assets/team/user.png";
 import saksham from "@/assets/team/user.png";
-import sumanth from "@/assets/team/user.png";
+import sumanth from "@/assets/team/sumant.jpg";
 
 const teamMembers = [
   { name: "Ayush Kumar", image: ayushkumar },
