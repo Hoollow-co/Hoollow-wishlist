@@ -1,34 +1,36 @@
 import { motion } from "framer-motion";
 
 // Team member images
-import aayushKumar from "@/assets/team/aayush-kumar.png";
-import anjaniKrishna from "@/assets/team/anjani-krishna.png";
-import anubme from "@/assets/team/anubme.png";
-import darshPatil from "@/assets/team/darsh-patil.png";
-import imNotDsa from "@/assets/team/im-not-dsa.png";
-import jojish from "@/assets/team/jojish.png";
-import harshraj from "@/assets/team/harshraj.png";
-import sushi from "@/assets/team/sushi.png";
-import vkop from "@/assets/team/vkop.png";
-import workLikeHell1 from "@/assets/team/work-like-hell-1.png";
-import workLikeHell2 from "@/assets/team/work-like-hell-2.png";
-import yashunnioti from "@/assets/team/yashunnioti.png";
-import yash from "@/assets/team/yash.png";
+import ayushkumar from "@/assets/team/ayush-kumar.png";
+import anjaniKrishna from "@/assets/team/user.png";
+import anulome from "@/assets/team/user.png";
+import darshPatil from "@/assets/team/user.png";
+import faiyan from "@/assets/team/user.png";
+import jayish from "@/assets/team/user.png";
+import harshraj from "@/assets/team/user.png";
+import sakshi from "@/assets/team/user.png";
+import yash from "@/assets/team/user.png";
+import rajat from "@/assets/team/user.png";
+import sarvesh from "@/assets/team/user.png";
+import anushka from "@/assets/team/user.png";
+import saksham from "@/assets/team/user.png";
+import sumanth from "@/assets/team/user.png";
 
 const teamMembers = [
-  { name: "Aayush Kumar", image: aayushKumar },
-  { name: "Anjani Krishna", image: anjaniKrishna },
-  { name: "Anubme", image: anubme },
+  { name: "Ayush Kumar", image: ayushkumar },
+  { name: "Anulome", image: anulome },
+  { name: "Jayish", image: jayish },
   { name: "Darsh Patil", image: darshPatil },
-  { name: "I'm not DSA", image: imNotDsa },
-  { name: "Jojish", image: jojish },
-  { name: "Harshraj", image: harshraj },
-  { name: "Sushi", image: sushi },
-  { name: "VKOP", image: vkop },
-  { name: "Work Like Hell", image: workLikeHell1 },
-  { name: "Work Like Hell", image: workLikeHell2 },
-  { name: "Yashunnioti", image: yashunnioti },
+  { name: "Sarvesh", image: sarvesh },
+  { name: "Faiyan", image: faiyan },
+  { name: "Anjani Krishna", image: anjaniKrishna },
+  { name: "Harsh raj", image: harshraj },
   { name: "Yash", image: yash },
+  { name: "Sakshi", image: sakshi },
+  { name: "Rajat", image: rajat },
+  { name: "Anushka", image: anushka },
+  { name: "Saksham", image: saksham },
+  { name: "Sumanth", image: sumanth },
 ];
 
 const containerVariants = {
